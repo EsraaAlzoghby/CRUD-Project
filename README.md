@@ -19,7 +19,7 @@ This CRUD app is a simple web application built using HTML, CSS, and JavaScript.
 </ul>
 
 ## Live Demo
-Check out the live demo **[here](https://esraaalzoghby.github.io/Random-Quotes-App/)**.
+Check out the live demo **[here](https://esraaalzoghby.github.io/CRUD-Project/)**.
 
 ## ScreenShot
 <img src= https://github.com/user-attachments/assets/2b37e152-970f-43f4-918f-636d5e77f608>
