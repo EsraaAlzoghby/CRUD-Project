@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: #262626;">
+<!-- form -->
+<div class="container">
+  <h1 class="pt-5 text-center" style="color: #98E4FF;">Product Mangment System</h1>
+    <div class="pt-4 fs-5 w-75 m-auto"  style="color: #98E4FF;">
+        <div class="mb-3">
+          <label for="productName" class="form-label">Product Name :</label>
+          <input type="text" class="form-control" id="ProductName" oninput="validationNameInput()">
+          <div class="alert alert-primary d-none mt-2" id="ErrorMessageName" role="alert">
+            "must be 3-50 characters long and can only include letters, numbers, spaces, and hyphens."
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="ProductPrice" class="form-label">Product Price :</label>
+          <input type="number" class="form-control" id="ProductPrice" oninput="validationPriceInput()">
+          <div class="alert alert-primary d-none mt-2" id="ErrorMessagePrice" role="alert">
+            "must be a positive number, optionally with up to two decimal places."
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="productCategory" class="form-label">Product Category :</label>
+            <input type="text" class="form-control" id="productCategory" list="list" oninput="validationCategoryInput()">
+            <div class="alert alert-primary d-none mt-2" id="ErrorMessageCategory" role="alert">
+              "must be 3-30 characters long and can only include letters, spaces, and hyphens."
+            </div>
+            <!-- <datalist id="list">
+            <option value="TV">TV</option>
+            <option value="Mobile">Mobile</option>
+            <option value="screens">screens</option>
+          </datalist>  -->
+          </div>
+          <div class="mb-3">
+            <label for="productDesc" class="form-label">Product Desc :</label>
+            <textarea class="form-control" id="productDesc" rows="3" oninput="validationDescInput()"></textarea>
+            <div class="alert alert-primary d-none mt-2" id="ErrorMessageDesc" role="alert">
+              "must be must be 10-500 characters long and can only include letters, numbers, spaces, hyphens, periods, and commas."
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="productFail" class="form-label">Product img :</label>
+            <input type="file" class="form-control" id="productFail" oninput="validationImageInput()">
+            <!-- <div class="alert alert-primary d-none" id="ErrorMessageImage" role="alert">
+              "must be jpg, .jpeg, .png, .gif, or .webp."
+            </div> -->
+          </div>
+          
+        <button type="button" class="btn btn-info" onclick="addProduct()" id="addButton">Add Product</button>
+        <button type="button" class="btn btn-secondary d-none" onclick="updateProduct()" id="updateButton">Update Product</button>
+    </div>
+
+    <input type="search" class="form-control mt-5 w-50 m-auto" placeholder="search" oninput="displaySearchProduct()" id="searchInput">
+    <div class="row mt-5 g-4" id="rowdata">
+    </div>
+</div>
+<!-- form -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

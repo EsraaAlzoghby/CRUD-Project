@@ -1,0 +1,11 @@
+img{
+    height: 300px;
+    width: 200px;
+    object-fit: contain;
+}
+@media (max-width: 576px) { 
+    h1{
+    font-size:25px !important;
+    }
+ }
+
